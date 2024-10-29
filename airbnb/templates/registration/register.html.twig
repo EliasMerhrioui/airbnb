@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    
+
+    <div id="login-container" class="container">
+        <h2 class="center">Inscription</h2>
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        <div class="checkbox">
+            {{ form_row(registrationForm.agreeTerms) }}
+        </div>
+
+        <div class="row center"> 
+            <button type="submit" class="btn">Inscription</button>
+        </div>
+    {{ form_end(registrationForm) }}
+
+    </div>
+{% endblock %}
